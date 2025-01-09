@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Výběr uživatele</title>
+    <link rel="stylesheet" th:href="@{/css/mainStyles.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<div class="content">
+    <h1>Vyberte uživatele</h1>
+    <form action="/register" method="get">
+        <button type="submit">Register</button>
+    </form>
+    <form th:action="@{/login}" method="post">
+            <label for="username">Uživatelské jméno:</label>
+            <input type="text" id="username" name="username" autocomplete="current-username" required>
+
+            <label for="password">Heslo:</label>
+            <input type="password" id="password" name="password"  autocomplete="current-password" required>
+            <button type="submit">Přihlásit se</button>
+    </form>
+</div>
+</body>
+</html>

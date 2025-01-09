@@ -1,0 +1,133 @@
+.content{
+    max-width: 1600px;
+    position: relative;
+    margin: auto;
+}
+/* Globální styl pro tabulky */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Odstranění mezer mezi buňkami */
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+    max-height: 400px;
+}
+
+/* Styl pro hlavičku tabulky */
+table thead th {
+    background-color: #4CAF50; /* Zelené pozadí */
+    color: white; /* Bílé písmo */
+    padding: 12px 15px;
+    text-align: center;
+}
+
+/* Styl pro tělo tabulky */
+table tbody td {
+    padding: 12px 15px;
+    border: 1px solid #ddd; /* Světle šedé ohraničení */
+}
+
+/* Střídavé barvy řádků */
+table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Světle šedá barva */
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #ffffff; /* Bílé pozadí */
+}
+
+/* Styl při najetí na řádek myší */
+table tbody tr:hover {
+    background-color: #ddd; /* Světle šedé pozadí */
+}
+
+/*Formulare */
+form {
+    max-width: 600px; /* Maximální šířka formuláře */
+    margin: 20px auto; /* Vycentrování formuláře */
+    background: #f9f9f9; /* Světle šedé pozadí */
+    padding: 20px;
+    border-radius: 8px; /* Zakulacené rohy */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Jemný stín */
+    font-size: 16px;
+}
+
+/* Styl pro popisky */
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.userInfo{
+    width: 300px;
+    display: grid;
+
+}
+.userInfo > div{
+    display: block;
+}
+.userInfo_item{
+
+}
+.userInfo > div > form{
+    background: none;
+    border: none;
+    box-shadow: none;
+    max-width: 200px;
+    padding: 0px;
+    border: 0px;
+}.userInfo > div > form > button{
+    width: 100%;
+}
+/* Styl pro vstupní pole */
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form input[type="password"],
+form textarea,
+
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Zajištění správného chování paddingu */
+    font-size: 16px;
+}
+form input{
+    padding: 10px;
+    max-width: 70%;
+}
+/* Styl pro tlačítka */
+form button[type="submit"] {
+    background-color: #4CAF50; /* Zelené pozadí */
+    color: white; /* Bílé písmo */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Efekt při najetí myší */
+}
+
+/* Styl při najetí na tlačítko */
+form button[type="submit"]:hover {
+    background-color: #45a049; /* Tmavší zelená */
+}
+
+/* Styl pro textové oblasti */
+form textarea {
+    resize: vertical; /* Povolit změnu velikosti pouze vertikálně */
+    min-height: 100px;
+}
+
+/* Chybová zpráva */
+form .error {
+    color: red;
+    font-size: 14px;
+    margin-top: -15px;
+    margin-bottom: 15px;
+}

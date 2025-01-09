@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Oblíbená vína</title>
+    <link rel="stylesheet" href="/css/mainStyles.css">
+</head>
+<body>
+<h1>Oblíbená vína uživatele</h1>
+
+<!-- Tabulka oblíbených vín -->
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nazev</th>
+        <th>Typ</th>
+        <th>Rok</th>
+        <th>Cena</th>
+        <th>Popis</th>
+        <th>Mnozstvi</th>
+        <th>Vinarstvi</th>
+        <th>Region</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr th:each="wine : ${favoriteWines}">
+            <td th:text="${wine.wineId}"></td>
+            <td th:text="${wine.name}"></td>
+            <td th:text="${wine.type}"></td>
+            <td th:text="${wine.year}"></td>
+            <td th:text="${wine.price}"></td>
+            <td th:text="${wine.description}"></td>
+            <td th:text="${wine.stockQuantity}"></td>
+            <td th:text="${wine.winery.name}"></td>
+            <td th:text="${wine.region.name}"></td>
+        </tr>
+    </tbody>
+</table>
+
+<a href="/wines">Zpět na seznam vín</a>
+</body>
+</html>

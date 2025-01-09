@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Kosik</title>
+    <link rel="stylesheet" href="/css/mainStyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+<h1>Seznam vín</h1>
+
+<!-- Zobrazení košíku -->
+<h2>Košík</h2>
+<p>Počet položek: <span th:text="${cart.winesInCart.size()}"></span></p>
+<p>Celková cena: <span th:text="${cart.totalPrice}"></span> Kč</p>
+
+<!-- Zobrazení chybové zprávy -->
+<p th:if="${errorMessage != null}" th:text="${errorMessage}" style="color: red;"></p>
+
+<!-- Tabulka s víny -->
+<table border="1">
+    <thead>
+    <tr>
+        <th>Název</th>
+        <th>Typ</th>
+        <th>Rok</th>
+        <th>Cena</th>
+        <th>Mnozstvi</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="w : ${cart.getWinesInCart().values()}">
+        <td th:text="${w.wine.name}"></td>
+        <td th:text="${w.wine.type}"></td>
+        <td th:text="${w.wine.year}"></td>
+        <td th:text="${w.wine.price}"></td>
+        <td th:text="${w.quantity}"></td>
+    </tr>
+    </tbody>
+</table>
+<div>
+    <a th:href="@{/create-order}">CreateOrder</a>
+</div>
+</body>
+</html>
